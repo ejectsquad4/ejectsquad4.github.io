@@ -208,12 +208,11 @@ hr {
 .qimg {
   width: 779px;
   height: 520px;
-  left: calc(50% - 779px / 2 + 10.5px);
-  top: calc(50% - 350px / 2 - 1150px);
 }
 
 .infot {
   padding-top: 52px;
+
 }
 
 .info {
@@ -232,4 +231,57 @@ hr {
 
 #clientes {
   background: rgba(251, 183, 84, 0.6);
+}
+
+#clientes span {
+  font-weight: 700;
+}
+
+.owl-carousel img {
+  background: #FCFCFC;
+  box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.55);
+  border-radius: 50%;
+  max-width: 60%;
+  margin: 5px auto;
+}
+
+.item {
+  margin-bottom: 15px;
+}
+
+
+@media (max-width: 538px) {
+  .info {
+    padding: 0 0 25px 0;
+  }
+
+  svg {
+    margin: 0;
+    padding: 0;
+  }
+
+  .caption {
+    top: 18%;
+  }
+
+  #t1 {
+    padding-top: 20px;
+    font-size: 35px;
+  }
+
+  #t2 {
+    font-size: 20px;
+  }
+
+  .botao {
+    margin-top: -20px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .qimg {
+    width: auto;
+    height: auto;
+  }
+
 }
