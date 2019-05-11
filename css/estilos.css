@@ -212,6 +212,7 @@ hr {
 
 .infot {
   padding-top: 52px;
+
 }
 
 .info {
@@ -238,17 +239,20 @@ hr {
 
 .owl-carousel img {
   background: #FCFCFC;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.55);
   border-radius: 50%;
-  margin-bottom: 5px;
-  max-width: 80%;
+  max-width: 60%;
   margin: 5px auto;
+}
+
+.item {
+  margin-bottom: 15px;
 }
 
 
 @media (max-width: 538px) {
   .info {
-    padding: 0;
+    padding: 0 0 25px 0;
   }
 
   svg {
@@ -279,4 +283,5 @@ hr {
     width: auto;
     height: auto;
   }
+
 }
