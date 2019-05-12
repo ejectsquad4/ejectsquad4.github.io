@@ -1,5 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import clientes
 
 def home(request):
-    return render(request, 'index.html')
+    cliente = clientes.objects.all()
+    context = {
+        'cliente': cliente
+    }
+    return render(request, 'index.html', context)
+
