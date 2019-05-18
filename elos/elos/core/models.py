@@ -40,9 +40,9 @@ class clientes(models.Model):
 
 
 class portfolio(models.Model):
-    titulo = models.CharField('Titulo do Portifólio', default='titulo', max_length=100)
+    titulo = models.CharField('Titulo do Projeto', default='titulo', max_length=100)
     img_portfolio = models.ImageField(upload_to='img/img_portfolio', verbose_name='Imagem do Portifólio')
-    desc_portfolio = models.TextField('Portfólio')
+    desc_portfolio = models.TextField('Descrição do projeto')
 
     class Meta:
         verbose_name = 'Portifólio'
