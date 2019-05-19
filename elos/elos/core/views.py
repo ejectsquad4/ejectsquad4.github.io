@@ -12,7 +12,7 @@ def home(request):
         form = Contato(request.POST)
         if form.is_valid():
             context['is_valid'] = True
-            print(form.cleaned_data)
+            form.send_mail()
             form = Contato()
     else:
         form = Contato()

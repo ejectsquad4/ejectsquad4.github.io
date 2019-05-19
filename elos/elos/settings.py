@@ -125,3 +125,15 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'elos', 'media')
 MEDIA_URL = '/media/'
+
+#Emails
+EMAIL_BACKEND = 'django.core.email.backends.smtp.EmailBackend'
+#EMAIL_BACKEND = 'django.core.email.backends.console.EmailBackend'
+DEFAULT_FROM_EMAIL = 'Nome <email@gmail.com>'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smpt.gmail.com'
+EMAIL_HOST_USER = 'email@gmail.com'
+EMAIL_HOST_SENHA = 'senha'
+EMAIL_PORT = 587
+
+CONTACT_EMAIL = 'email@gmai.com'
