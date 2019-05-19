@@ -116,12 +116,39 @@
     <!-- FIM DA QUEM SOMOS -->
 
     <!-- SERVIÇOS -->
-    <div id="servicos" class="offset ">
-      <a id="servicos-a" class="anchor">a</a>
-      <div class="col-12 narrow text-center servicos">
-        <h1 class="qtitulo">
-          <span class="bold">Serviços</span>
-        </h1>
+    <div id="servicos" class="offset">
+        <a id="servicos-a" class="anchor">a</a>
+        <div class="col-12 narrow text-center">
+          <h1 class="qtitulo">
+            <span class="bold">Serviços</span>
+          </h1>
+
+        <div class="servico-container container">
+          {% for serv in serv %}
+            <div class="servico-info">
+              <img
+                class="simg img-fluid"
+                src="{{ serv.img_serviço.url }}"
+                alt="{{ serv.titulo }}"
+              />
+              <h3>{{ serv.titulo }}</h3>
+              <p class="servico-bdesc">
+                {{ serv.desc_serviço }}
+              </p>             
+              <button class="modal-open botao"data-modal="modal_{{ serv.titulo }}">Saiba Mais</button>
+              <div class="modal" id="modal_{{ serv.titulo }}">
+                  <div class="modal-content">
+                      <div class="modal-header">{{ serv.titulo }}<a href="#modal_{{ serv.titulo }}" class="popup_close closeBtn modal-close">X</a>
+                      </div>
+                      <div class="modal-body">
+                          <img  class="img-modal" src="{{ serv.img_serviço.url }}" alt=" {{ serv.titulo }}">
+                          <p class="servico-bdesc">{{ serv.sobre_serviço }}</p>
+                      </div>
+                  </div>
+              </div>
+              </div>
+          {% endfor %}   
+          </div>  
       </div>
     </div>
     <!-- FIM DA SERVIÇOS -->
@@ -182,37 +209,17 @@
       <div class="row">
         <div class="col-md-6 formulario">
           <h1>Contato</h1>
-          <form>
+          <form action="#contato-a">
             <ul class="form-style-1">
               <li>
-                <input
-                  type="text"
-                  name="field1"
-                  class="field-divided"
-                  placeholder="NOME"
-                />
-                <input
-                  type="text"
-                  name="field2"
-                  class="field-divided"
-                  placeholder="TELEFONE"
-                />
+                {{ form.nome}}
+                {{ form.telefone }}
               </li>
               <li>
-                <input
-                  type="email"
-                  name="field3"
-                  class="field-long"
-                  placeholder="EMAIL"
-                />
+                {{ form.email }}
               </li>
               <li>
-                <textarea
-                  name="field5"
-                  id="field5"
-                  class="field-long field-textarea"
-                  placeholder="MENSAGEM"
-                ></textarea>
+                {{ form.mensagem }}
               </li>
               <div class="buttonHolder">
                 <li>
@@ -240,6 +247,39 @@
     </div>
 
     <!-- FIM DA CONTATO -->
+    <!-- INICIO FOOTER -->
+
+    <div  class="rodape">
+          <p class="textoRodape"> iv © ProSEmpre EJECT 2019         
+      <span class="sociais">
+        <a href="https://twitter.com/AssencoMau" target="_blank">
+          <i class="fab fa-whatsapp fa-3x"></i>
+        </a>
+        <a href="https://www.facebook.com/mau.assenco"
+            target="_blank">
+            <i class="fab fa-facebook fa-3x"></i>
+        </a>         
+        <a href=https://www.instagram.com/mau.assenco"
+            target="_blank">
+            <i class="fab fa-instagram fa-3x"></i>
+        </a>
+      </span></p> 
+    </div>
+  <!-- FINAL FOOTER -->
+
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/5cdf4f3a2846b90c57af1ef7/default';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
 
     <script src="{% static 'js/main.js' %}"></script>
 

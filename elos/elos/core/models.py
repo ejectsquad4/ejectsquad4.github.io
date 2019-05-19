@@ -4,7 +4,6 @@ class inicio(models.Model):
     titulo = models.CharField('Titulo', default='Inicio', max_length=100)
     tit_inic = models.TextField('Titulo do Inicio', default= 'Titulo do Inicio')
     subtit_inic = models.TextField('Subtitulo do Inicio', default='subtitulo')
-    txt_bt_inic = models.CharField('Texto do botão', default='texto do botao', max_length=100)
     img_inic = models.ImageField(upload_to='img/img_inicio', verbose_name='Imagem do Inicio')
 
     class Meta:
@@ -53,8 +52,9 @@ class portfolio(models.Model):
 
 class serviços(models.Model):
     titulo = models.CharField('Titulo do serviço', default='titulo', max_length=100)
-    img_serviço = models.ImageField(upload_to='img/img_serviço', verbose_name='Imagem do Serviço')
-    desc_serviço = models.TextField('Serviço')
+    img_serviço = models.ImageField(upload_to='img/img_servico', verbose_name='Imagem do Serviço')
+    desc_serviço = models.TextField('Breve descrição', default= 'Descrição')
+    sobre_serviço = models.TextField('Descrição aprofundad', default= 'Sobre')
 
     class Meta:
         verbose_name = 'Serviço'
