@@ -8,6 +8,7 @@ body {
   letter-spacing: 1.35px;
   text-transform: uppercase;
   color: #4f4f4f;
+  padding-bottom: 0;
 }
 
 #t1 {
@@ -269,7 +270,7 @@ hr {
 
 .anchor {
   position: relative;
-  top: -80px;
+  top: -100px;
   visibility: hidden;
 }
 
@@ -307,7 +308,7 @@ hr {
 }
 
 .box:hover .imgBx img {
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 .box .portfolio-conteudo {
@@ -353,7 +354,155 @@ hr {
 /* SERVIÇOS */
 #servicos {
   background: rgba(251, 183, 84, 0.6);
+  padding-bottom: 145px;
 }
+
+.servico-container {
+  display: grid;
+  grid-gap: 71px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+  margin-bottom: 15px;
+}
+
+.servico-container h3 {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 41px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 1.35px;
+  text-transform: uppercase;
+  margin-top: 41px;
+  margin-bottom: 41px;
+}
+
+.servico-info {
+  padding: 0.5rem;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.servico-info button {
+  width: 300px;
+  height: 56px;
+  left: 1063px;
+  top: 674px;
+
+  /* Laranja */
+
+  background: #ff471f;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+
+.servico-bdesc {
+  text-align: justify;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  align-items: center;
+  letter-spacing: 1.35px;
+  text-transform: uppercase;
+}
+
+.simg {
+  width: 200px;
+  height: 200px;
+}
+
+/* SERVICOS  INICIO MODAL */
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(79, 79, 79, 0.5);
+  z-index: 2;
+  display: none;
+  overflow: auto;
+  animation: modal-open 0.7s;
+}
+
+.modal-content {
+  background: #f7f2e5;
+  margin: 10% 10%;
+  padding: 20px;
+  width: auto;
+  border-radius: 4px;
+  z-index: 4;
+  position: relative;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.9), 0 7px 20px 0 rgba(0, 0, 0, 0.7);
+  top: 20%;
+  text-align: center;
+}
+
+.modal-header {
+  font-weight: 500;
+  padding: 10px 0;
+  font-size: 26px;
+}
+
+.modal-header .modal-close {
+  float: right;
+  font-size: 15px;
+  border: 0;
+  outline: 0;
+  border-radius: 50%;
+}
+
+.modal-body {
+  color: #4f4f4f;
+  padding: 15px 0;
+}
+
+.img-modal {
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.closeBtn {
+  position: absolute;
+  top: -17px;
+  right: -17px;
+  width: 2rem;
+  height: 2rem;
+  font-weight: bold;
+  border-radius: 100%;
+  background-color: #ff471f;
+  z-index: 4;
+  color: #fcfcfc;
+  line-height: 2rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.closeBtn:hover,
+.closeBtn:focus {
+  cursor: pointer;
+  color: #4f4f4f;
+  text-decoration: none;
+}
+
+@keyframes modal-open {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* PORTFOLIO FIM MODAL */
 
 /* CONTATO  */
 .contatoMapa {
@@ -476,12 +625,47 @@ textarea {
   border-radius: 25px;
   margin: 10px 100px;
 }
+
 .responsive-map iframe {
   left: 0;
   top: 0;
   height: 100%;
   width: 100%;
   position: absolute;
+}
+
+/* RODAPE */
+.rodape {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 1.35px;
+  text-transform: uppercase;
+  background: #fbb754;
+  color: #000000;
+  height: 63px;
+}
+
+.rodape p {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.sociais {
+  float: right;
+  margin-right: 90px;
+  padding-bottom: 10px;
+}
+.sociais a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.sociais a :hover {
+  color: #ff471f;
+  transition: all 0.3s ease-out;
 }
 
 /* Media queries */
@@ -534,7 +718,18 @@ textarea {
     height: 0;
     border-radius: 25px;
   }
+
   .mapa h1 {
     text-align: center;
+  }
+
+  .servico-bdesc,
+  #portfolio,
+  #quem,
+  #servicos {
+    padding-bottom: 25px;
+  }
+  .rodape {
+    height: 83px;
   }
 }
