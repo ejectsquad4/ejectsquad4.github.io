@@ -209,17 +209,39 @@
       <div class="row">
         <div class="col-md-6 formulario">
           <h1>Contato</h1>
-          <form action="#contato-a">
+          <form action="#contato-a" method="POST">
+            {% csrf_token %}
             <ul class="form-style-1">
               <li>
                 {{ form.nome}}
                 {{ form.telefone }}
+                {% if form.nome.errors %}
+                  {% for error in form.nome.errors %}
+                    {{ error }}
+                  {% endfor %}
+                {% endif %}
+                {% if form.telefone.errors %}
+                  <p></p>
+                  {% for error in form.telefone.errors %}
+                    {{ error }}
+                  {% endfor %}
+                {% endif %}
               </li>
               <li>
                 {{ form.email }}
+                {% if form.email.errors %}
+                  {% for error in form.email.errors %}
+                    {{ error }}
+                  {% endfor %}
+                {% endif %}
               </li>
               <li>
                 {{ form.mensagem }}
+                {% if form.mensagem.errors %}
+                  {% for error in form.mensagem.errors %}
+                    {{ error }}
+                  {% endfor %}
+                {% endif %}
               </li>
               <div class="buttonHolder">
                 <li>

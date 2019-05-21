@@ -3,7 +3,7 @@ from django.template.defaultfilters import striptags
 from django.core.mail import EmailMultiAlternatives
 from django.conf import settings
 
-def send_mail_template(subject, template_name, context, recipient_list,
+def send_mail_template(template_name, context, recipient_list,
     from_email=settings.DEFAULT_FROM_EMAIL, fail_silently=False):
 
     mensagem_html = render_to_string(template_name, context)
