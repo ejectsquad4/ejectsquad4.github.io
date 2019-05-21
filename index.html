@@ -9,311 +9,451 @@
     <link rel="icon" href="img/logo1.jpg" />
     <title>Mostra Elos</title>
 
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Nunito|Roboto:100,300,400,500,700"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/estilos.css" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,
+      user-scalable=no" />
+  <link rel="icon" href="img/logo1.jpg" />
+  <title>Mostra Elos</title>
 
-    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/owl.theme.default.css" />
-  </head>
 
-  <!-- Ativando o link do menu, de acordo com a sessão que estou do site -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Nunito|Roboto:100,300,400,500,600,700"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+  integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-  <body data-spy="scroll" data-target="#navbarResponsive">
-    <!-- INICIO -->
-    <div id="inicio">
-      <!-- NAV -->
-      <nav class="navbar navbar-expand-md fixed-top">
-        <a class="navbar-brand" href="#">
-          <img src="img/Logo.png" alt="" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarResponsive"
-        >
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-        </button>
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto ">
-            <li class=" nav-item">
-              <a href=" #inicio" class="nav-link">Início</a>
-            </li>
-            <li class="nav-item">
-              <a href="#quem-a" class="nav-link">Quem Somos</a>
-            </li>
-            <li class="nav-item">
-              <a href="#servicos-a" class="nav-link">Serviços</a>
-            </li>
-            <li class="nav-item">
-              <a href="#portfolio-a" class="nav-link">Portfólio</a>
-            </li>
-            <li class="nav-item">
-              <a href="#clientes-a" class="nav-link">Clientes</a>
-            </li>
-            <li class="nav-item">
-              <a href="#contato-a" class="nav-link">Contato</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <!-- FINAL da NAV -->
+  <link rel="stylesheet" href="css/estilos.css" />
 
-      <!-- BANNER -->
-      <div class="banner">
-        <div class="home-wrap">
-          <div class="home-inner"></div>
-        </div>
+  <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/owl.theme.default.css" />
+
+  
+</head>
+
+<body data-spy="scroll" data-target="#navbarResponsive">
+  <!-- INICIO -->
+  <div id="inicio">
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-md fixed-top">
+      <a class="navbar-brand" href="#">
+        <img src="img/Logo.png" alt="" />
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="#inicio" class="nav-link">Início</a>
+          </li>
+          <li class="nav-item">
+            <a href="#quem-a" class="nav-link">Quem Somos</a>
+          </li>
+          <li class="nav-item">
+            <a href="#servicos-a" class="nav-link">Serviços</a>
+          </li>
+          <li class="nav-item">
+            <a href="#portfolio-a" class="nav-link">Portfólio</a>
+          </li>
+          <li class="nav-item">
+            <a href="#clientes-a" class="nav-link">Clientes</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contato-a" class="nav-link">Contato</a>
+          </li>
+        </ul>
       </div>
-      <div class="caption text-center">
-        <h1 id="t1">
-          Utilizando a arquitetura como instrumento de transformação social
-        </h1>
-        <hr />
-        <h2 id="t2">Somando elos para multiplicar a corrente do bem</h2>
-        <a href="#contato-a" class="botao btn btn-outline-light btn-lg"
-          >Seja um elo <br />dessa corrente</a
-        >
-      </div>
+    </nav>
+    <!-- FINAL da NAV -->
 
-      <!-- FIM da BANNER -->
-    </div>
-    <!-- FIM DA INICIO -->
-
-    <!-- QUEM SOMOS -->
-    <div id="quem" class="offset">
-      <a id="quem-a" class="anchor">a</a>
-      <div class="col-12 narrow text-center">
-        <h1 class="qtitulo">
-          <span class="thin">Quem</span> <span class="bold">somos</span>
-        </h1>
-        <img
-          class="qimg img-fluid"
-          src="img/qsomos.jpg"
-          alt="Imagem da equipe Mostra Elos"
-        />
-        <h2 class="infot">Informações sobre o projeto</h2>
-        <p class="info">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit
-          pariatur at quaerat molestiae temporibus esse corporis aliquid vitae
-          provident, repudiandae earum quis, sapiente veritatis perferendis
-          dignissimos magni quasi reprehenderit nesciunt cumque ducimus
-          voluptatem saepe laboriosam officia. Maxime, magni quasi unde nisi
-          vitae minima aperiam quos sunt iure iusto nam non veniam, laborum
-          dolor neque. Eos tempora natus quo ab fugiat nostrum dignissimos culpa
-          aliquam officiis ut, doloremque, perspiciatis distinctio amet. In, ut
-          commodi! Sunt earum eaque optio, corrupti officiis atque minus
-          sapiente molestiae, laborum architecto ducimus ipsa quis ratione dicta
-          iste doloribus inventore exercitationem nihil beatae? Facere, est
-          ullam. Impedit.
-        </p>
-      </div>
-    </div>
-    <!-- FIM DA QUEM SOMOS -->
-
-    <!-- SERVIÇOS -->
-    <div id="servicos" class="offset ">
-      <a id="servicos-a" class="anchor">a</a>
-      <div class="col-12 narrow text-center servicos">
-        <h1 class="qtitulo">
-          <span class="bold">Serviços</span>
-        </h1>
-      </div>
-    </div>
-    <!-- FIM DA SERVIÇOS -->
-
-    <!-- PORTFOLIO -->
-
-    <div id="portfolio" class="offset">
-      <a id="portfolio-a" class="anchor">a</a>
-      <div class="col-12 narrow text-center">
-        <h1 class="qtitulo">
-          <span class="bold">Portfólio</span>
-        </h1>
-        <div class="portfolio-container">
-          <div class="box">
-            <div class="imgBx">
-              <img src="img/portfolio1.jpg" alt="" />
-            </div>
-            <div class="portfolio-conteudo">
-              <h3>Projeto 1</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Adipisci et optio recusandae perspiciatis, rerum ut nisi tempore
-                cupiditate blanditiis nobis asperiores deleniti fuga dolorem
-                nemo, minus velit eligendi aliquam? Fugiat ipsam neque delectus
-                provident est cum, ducimus quibusdam, omnis deserunt expedita
-                inventore cupiditate, recusandae dolor eos amet nulla placeat
-                error.
-              </p>
-            </div>
-          </div>
-
-          <div class="box">
-            <div class="imgBx">
-              <img src="img/portfolio2.jpg" alt="" />
-            </div>
-            <div class="portfolio-conteudo">
-              <h3>Projeto 1</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Adipisci et optio recusandae perspiciatis, rerum ut nisi tempore
-                cupiditate blanditiis nobis asperiores deleniti fuga dolorem
-                nemo, minus velit eligendi aliquam? Fugiat ipsam neque delectus
-                provident est cum, ducimus quibusdam, omnis deserunt expedita
-                inventore cupiditate, recusandae dolor eos amet nulla placeat
-                error.
-              </p>
-            </div>
-          </div>
-
-          <div class="box">
-            <div class="imgBx">
-              <img src="img/portfolio3.jpg" alt="" />
-            </div>
-            <div class="portfolio-conteudo">
-              <h3>Projeto 1</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Adipisci et optio recusandae perspiciatis, rerum ut nisi tempore
-                cupiditate blanditiis nobis asperiores deleniti fuga dolorem
-                nemo, minus velit eligendi aliquam? Fugiat ipsam neque delectus
-                provident est cum, ducimus quibusdam, omnis deserunt expedita
-                inventore cupiditate, recusandae dolor eos amet nulla placeat
-                error.
-              </p>
-            </div>
-          </div>
+    <!-- BANNER -->
+    <div class="banner">
+      <div class="home-wrap">
+        <div class="home-inner ">
+            <img  class="img-fluid" src="img/background.jpg" alt="">          
         </div>
       </div>
     </div>
-    <!-- FIM DA PORTFOLIO -->
-
-    <!-- CLIENTES -->
-    <div id="clientes" class="offset">
-      <a id="clientes-a" class="anchor">a</a>
-      <div class="col-12 narrow text-center">
-        <h1 class="qtitulo">
-          <span class="bold">Clientes</span>
-        </h1>
-      </div>
-
-      <!-- CAROUSEL -->
-      <div class="owl-carousel owl-theme">
-        <div class="item ">
-          <img src="img/suvinilc.PNG" alt="Tintas Suvinil" />
-        </div>
-        <div class="item">
-          <img src="img/conjol.png" alt="Conjol Materiais de Construção" />
-        </div>
-        <div class="item">
-          <img src="img/96fm.jpg" alt="Radio 96fm" />
-        </div>
-        <div class="item">
-          <img src="img/supercola.png" alt="Supor Cola" />
-        </div>
-        <div class="item">
-          <img src="img/urbnaff.jpg" alt="Urbana Fotografia e Filmes" />
-        </div>
-        <div class="item">
-          <img
-            src="img/elizabthpc.png"
-            alt="Elziabeth Revestimentos Cerâmicos"
-          />
-        </div>
-        <div class="item">
-          <img src="img/radiounivc.PNG" alt="Radio Universitária 88.9" />
-        </div>
-        <div class="item">
-          <img src="img/jpnatalb.PNG" alt="Radio Jovem Pan Natal" />
-        </div>
-        <div class="item">
-          <img src="img/adapte.PNG" alt="Adapte acessibilidade e arquitetura" />
-        </div>
-        <div class="item">
-          <img src="img/radio98.PNG" alt="Radio 98fm" />
-        </div>
-      </div>
-      <!-- FIM DO CAROUSEL -->
+    <div class="caption text-center">
+      <h1 id="t1">
+        Utilizando a arquitetura como instrumento de transformação social
+      </h1>
+      <hr />
+      <h2 id="t2">Somando elos para multiplicar a corrente do bem</h2>
+      <a href="#contato-a" class="botao btn btn-outline-light btn-lg">Seja um
+        elo <br />dessa corrente</a>
     </div>
 
-    <!-- FIM DA CLIENTES -->
+    <!-- FIM da BANNER -->
+  </div>
+  <!-- FIM DA INICIO -->
 
-    <!-- CONTATO -->
-    <div id="contato container-fluid" class="offset contatoMapa">
-      <a id="contato-a" class="anchor">a</a>
+  <!-- QUEM SOMOS -->
+  <div id="quem" class="offset">
+    <a id="quem-a" class="anchor">a</a>
+    <div class="col-12 narrow text-center">
+      <h1 class="qtitulo">
+        <span class="thin">Quem</span> <span class="bold">somos</span>
+      </h1>
+      <img class="qimg img-fluid" src="img/qsomos.jpg" alt="Imagem da equipe Mostra Elos" />
+      <h2 class="infot">Informações sobre o projeto</h2>
+      <p class="info">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit
+        pariatur at quaerat molestiae temporibus esse corporis aliquid vitae
+        provident, repudiandae earum quis, sapiente veritatis perferendis
+        dignissimos magni quasi reprehenderit nesciunt cumque ducimus
+        voluptatem saepe laboriosam officia. Maxime, magni quasi unde nisi
+        vitae minima aperiam quos sunt iure iusto nam non veniam, laborum
+        dolor neque. Eos tempora natus quo ab fugiat nostrum dignissimos culpa
+        aliquam officiis ut, doloremque, perspiciatis distinctio amet. In, ut
+        commodi! Sunt earum eaque optio, corrupti officiis atque minus
+        sapiente molestiae, laborum architecto ducimus ipsa quis ratione dicta
+        iste doloribus inventore exercitationem nihil beatae? Facere, est
+        ullam. Impedit.
+      </p>
+    </div>
+  </div>
+  <!-- FIM DA QUEM SOMOS -->
 
-      <div class="row">
-        <div class="col-md-6 formulario">
-          <h1>Contato</h1>
-          <form>
-            <ul class="form-style-1">
-              <li>
-                <input
-                  type="text"
-                  name="field1"
-                  class="field-divided"
-                  placeholder="NOME"
-                />
-                <input
-                  type="text"
-                  name="field2"
-                  class="field-divided"
-                  placeholder="TELEFONE"
-                />
-              </li>
-              <li>
-                <input
-                  type="email"
-                  name="field3"
-                  class="field-long"
-                  placeholder="EMAIL"
-                />
-              </li>
-              <li>
-                <textarea
-                  name="field5"
-                  id="field5"
-                  class="field-long field-textarea"
-                  placeholder="MENSAGEM"
-                ></textarea>
-              </li>
-              <div class="buttonHolder">
-                <li>
-                  <input type="submit" value="ENVIAR" />
-                </li>
+  <!-- SERVIÇOS -->
+  <div id="servicos" class="offset">
+    <a id="servicos-a" class="anchor">a</a>
+    <div class="col-12 narrow text-center">
+      <h1 class="qtitulo">
+        <span class="bold">Serviços</span>
+      </h1>
+
+      <div class="servico-container container">
+        <!-- Inicio Modal1 -->
+        <div class="servico-info">
+          <img class="simg img-fluid" src="img/servicos1.png" alt="Foto projeto 1" />
+          <h3>Ações Sociais</h3>
+          <p class="servico-bdesc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius aliquid explicabo illo praesentium, eaque
+            beatae adipisci provident eos nisi recusandae ipsa doloremque laborum officiis voluptatibus repellat, non
+            repellendus earum voluptatem?
+          </p>
+          <button class="modal-open botao" data-modal="modal1">Saiba Mais</button>
+          <!-- MODAL1 -->
+          <div class="modal" id="modal1">
+            <div class="modal-content">
+              <div class="modal-header">Modal 1<a href="#modal1" class="popup_close closeBtn modal-close">X</a>
               </div>
-            </ul>
-          </form>
+              <div class="modal-body">
+                <img class="img-modal" src="img/servicos1.png" alt="">
+                <p class="servico-bdesc">SLorem ipsum dolor sit amet, consectetur adipisicing elit. Optio saepe
+                  blanditiis nulla ea. Eius nam, odit sunt perferendis dolorem deleniti quam tenetur architecto nemo
+                  quasi temporibus, nostrum, unde incidunt? Itaque quam, est voluptates voluptate dicta rem consectetur
+                  nisi ipsa aperiam nam quisquam saepe, sed adipisci facilis, atque natus rerum. In molestiae facilis
+                  dignissimos pariatur. Similique quaerat non aliquam reprehenderit error id consectetur, voluptates
+                  vitae exercitationem quibusdam doloribus dignissimos deserunt illo minus quae inventore eveniet rem
+                  soluta perspiciatis officia quam delectus veniam neque iure? Aliquam ut nostrum minima quis porro iste
+                  quae! Reprehenderit hic illum aperiam facere quas, ad atque delectus.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- FINAL MODAL1 -->
+
+        <!-- Inicio MODAL2 -->
+        <div class="servico-info">
+          <img class="simg img-fluid" src="img/servicos2.png" alt="Foto projeto 2" />
+          <h3>Eventos</h3>
+          <p class="servico-bdesc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius aliquid explicabo illo praesentium, eaque
+            beatae adipisci provident eos nisi recusandae ipsa doloremque laborum officiis voluptatibus repellat, non
+            repellendus earum voluptatem?
+          </p>
+          <button class="modal-open botao" data-modal="modal2">Saiba Mais</button>
+          <!-- MODAL1 -->
+          <div class="modal" id="modal2">
+            <div class="modal-content">
+              <div class="modal-header">Modal 2<a href="#modal2" class="popup_close closeBtn modal-close">X</a></button>
+              </div>
+              <div class="modal-body">
+                <img class="img-modal" src="img/servicos2.png" alt="">
+                <p class="servico-bdesc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio saepe
+                  blanditiis nulla ea. Eius nam, odit sunt perferendis dolorem deleniti quam tenetur architecto nemo
+                  quasi temporibus, nostrum, unde incidunt? Itaque quam, est voluptates voluptate dicta rem consectetur
+                  nisi ipsa aperiam nam quisquam saepe, sed adipisci facilis.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- FINAL MODAL2 -->
+        <!--Inicio MODAL3 -->
+        <div class="servico-info">
+          <img class="simg img-fluid" src="img/servicos3.png" alt="Foto projeto 2" />
+          <h3>Divulgação</h3>
+          <p class="servico-bdesc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius aliquid explicabo illo praesentium, eaque
+            beatae adipisci provident eos nisi recusandae ipsa doloremque laborum officiis voluptatibus repellat, non
+            repellendus earum voluptatem?
+          </p>
+          <button class="modal-open botao" data-modal="modal3">Saiba Mais</button>
+          <!-- MODAL3 -->
+          <div class="modal" id="modal3">
+            <div class="modal-content">
+              <div class="modal-header">Modal 3<a href="#modal3" class="popup_close closeBtn modal-close">X</a></button>
+              </div>
+              <div class="modal-body">
+                <img class="img-modal" src="img/servicos3.png" alt="">
+                <p class="servico-bdesc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio saepe
+                  blanditiis nulla ea. Eius nam, odit sunt perferendis dolorem deleniti quam tenetur architecto nemo
+                  quasi temporibus, nostrum, unde incidunt? Itaque quam, est voluptates voluptate dicta rem consectetur
+                  nisi ipsa aperiam nam quisquam saepe, sed adipisci facilis.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- FINAL MODAL3 -->
+      </div>
+    </div>
+  </div>
+
+  <!-- FIM DA SERVIÇOS -->
+
+  <!-- PORTFOLIO -->
+
+  <div id="portfolio" class="offset">
+    <a id="portfolio-a" class="anchor">a</a>
+    <div class="col-12 narrow text-center">
+      <h1 class="qtitulo">
+        <span class="bold">Portfólio</span>
+      </h1>
+      <div class="portfolio-container">
+
+        <div class="box">
+          <div class="imgBx">
+            <img src="img/portfolio1.jpg" alt="" />
+          </div>
+          <div class="portfolio-conteudo">
+            <h3>Projeto 1</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Adipisci et optio recusandae perspiciatis, rerum ut nisi tempore
+              cupiditate blanditiis nobis asperiores deleniti fuga dolorem
+              nemo, minus velit eligendi aliquam? Fugiat ipsam neque delectus
+              provident est cum, ducimus quibusdam, omnis deserunt expedita
+              inventore cupiditate, recusandae dolor eos amet nulla placeat
+              error.
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="imgBx">
+            <img src="img/portfolio2.jpg" alt="" />
+          </div>
+          <div class="portfolio-conteudo">
+            <h3>Projeto 2</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Adipisci et optio recusandae perspiciatis, rerum ut nisi tempore
+              cupiditate blanditiis nobis asperiores deleniti fuga dolorem
+              nemo, minus velit eligendi aliquam? Fugiat ipsam neque delectus
+              provident est cum, ducimus quibusdam, omnis deserunt expedita
+              inventore cupiditate, recusandae dolor eos amet nulla placeat
+              error.
+            </p>
+          </div>
         </div>
 
-        <div class="col-md-6 mapa">
-          <h1>Onde estamos</h1>
-          <div class="responsive-map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.0869096872666!2d-35.201285699818705!3d-5.843374609194293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b2ff82aa3e3b4d%3A0x20c4bb30f68e7bc3!2sEscola+de+Ci%C3%AAncias+e+Tecnologia+-+ECT%2FUFRN!5e0!3m2!1spt-BR!2sbr!4v1558048593188!5m2!1spt-BR!2sbr"
-              width="500"
-              height="460"
-              frameborder="0"
-              style="border:0"
-              allowfullscreen
-            ></iframe>
+        <div class="box">
+          <div class="imgBx">
+            <img src="img/portfolio3.jpg" alt="" />
+          </div>
+          <div class="portfolio-conteudo">
+            <h3>Projeto 3</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Adipisci et optio recusandae perspiciatis, rerum ut nisi tempore
+              cupiditate blanditiis nobis asperiores deleniti fuga dolorem
+              nemo, minus velit eligendi aliquam? Fugiat ipsam neque delectus
+              provident est cum, ducimus quibusdam, omnis deserunt expedita
+              inventore cupiditate, recusandae dolor eos amet nulla placeat
+              error.
+            </p>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  <!-- FIM DA PORTFOLIO -->
+
+  <!-- CLIENTES -->
+  <div id="clientes" class="offset">
+    <a id="clientes-a" class="anchor">a</a>
+    <div class="col-12 narrow text-center">
+      <h1 class="qtitulo">
+        <span class="bold">Clientes</span>
+      </h1>
+    </div>
+
+    <!-- CAROUSEL -->
+    <div id="owl-example" class="owl-carousel owl-theme">
+      <div class="item">
+        <img src="img/suvinilc.PNG" alt="Tintas Suvinil" />
+      </div>
+      <div class="item">
+        <img src="img/conjol.png" alt="Conjol Materiais de Construção" />
+      </div>
+      <div class="item">
+        <img src="img/96fm.jpg" alt="Radio 96fm" />
+      </div>
+      <div class="item">
+        <img src="img/supercola.png" alt="Supor Cola" />
+      </div>
+      <div class="item">
+        <img src="img/urbnaff.jpg" alt="Urbana Fotografia e Filmes" />
+      </div>
+      <div class="item">
+        <img src="img/elizabthpc.png" alt="Elziabeth Revestimentos Cerâmicos" />
+      </div>
+      <div class="item">
+        <img src="img/radiounivc.PNG" alt="Radio Universitária 88.9" />
+      </div>
+      <div class="item">
+        <img src="img/jpnatalb.PNG" alt="Radio Jovem Pan Natal" />
+      </div>
+      <div class="item">
+        <img src="img/adapte.PNG" alt="Adapte acessibilidade e arquitetura" />
+      </div>
+      <div class="item">
+        <img src="img/radio98.PNG" alt="Radio 98fm" />
+      </div>
+    </div>
+    <!-- FIM DO CAROUSEL -->
+  </div>
+
+
+  <!-- FIM DA CLIENTES -->
+
+  <!-- CONTATO -->
+  <div id="contato container-fluid" class="offset contatoMapa">
+    <a id="contato-a" class="anchor">a</a>
+
+    <div class="row">
+      <div class="col-md-6 formulario">
+        <h1 class="qtitulo">Contato</h1>
+        <form>
+          <ul class="form-style-1">
+            <li>
+              <input type="text" name="field1" class="field-divided" placeholder="NOME" />
+              <input type="text" name="field2" class="field-divided" placeholder="TELEFONE" />
+            </li>
+            <li>
+              <input type="email" name="field3" class="field-long" placeholder="EMAIL" />
+            </li>
+            <li>
+              <textarea name="field5" id="field5" class="field-long field-textarea" placeholder="MENSAGEM"></textarea>
+            </li>
+            <div class="buttonHolder">
+              <li>
+                <input type="submit" value="ENVIAR" />
+              </li>
+            </div>
+          </ul>
+        </form>
+      </div>
+
+      <div class="col-md-6 mapa">
+        <h1 class="qtitulo">Onde estamos</h1>
+        <div class="responsive-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.0869096872666!2d-35.201285699818705!3d-5.843374609194293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b2ff82aa3e3b4d%3A0x20c4bb30f68e7bc3!2sEscola+de+Ci%C3%AAncias+e+Tecnologia+-+ECT%2FUFRN!5e0!3m2!1spt-BR!2sbr!4v1558048593188!5m2!1spt-BR!2sbr"
+            width="500" height="460" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FIM DA CONTATO -->
+
+  <!-- INICIO FOOTER -->
+  <footer class="rodape">
+    <div class="container-fluid">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <p class="textoRodape"> iv © ProSEmpre EJECT 2019</p>
+          <span class="sociais">
+            <a href="#" target="_blank">
+              <i class="fab fa-whatsapp fa-3x"></i>
+            </a>
+            <a href="#" target="_blank">
+              <i class="fab fa-facebook fa-3x"></i>
+            </a>
+            <a href="#" target="_blank">
+              <i class="fab fa-instagram fa-3x"></i>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FINAL FOOTER -->
+
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {},
+      Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"),
+        s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/5cdf4f3a2846b90c57af1ef7/default';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
+
+  <script src="js/main.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+
+  <script type="text/javascript" src="js/owl.carousel.js"></script>
+  <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $(".owl-carousel").owlCarousel({
+        // stagePadding: 50,
+        loop: true,
+        margin: 10,
+        dots: true,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 2
+          },
+          1000: {
+            items: 4
+          }
+        }
+      });
+    })
+  </script>
+
+</body>
 
     <!-- FIM DA CONTATO -->
 

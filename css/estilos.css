@@ -8,6 +8,8 @@ body {
   letter-spacing: 1.35px;
   text-transform: uppercase;
   color: #4f4f4f;
+  padding-bottom: 0;
+  background: #f7f2e5;
 }
 
 #t1 {
@@ -129,15 +131,6 @@ hr {
 }
 
 /* INICIO */
-.home-inner {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: url(../img/background.jpg);
-  background-size: cover;
-  overflow: hidden;
-}
-
 .caption {
   width: 100%;
   max-width: 100%;
@@ -163,9 +156,10 @@ hr {
   height: 100%;
 }
 
-.home-inner {
+.home-inner img {
   position: fixed;
   display: table;
+  /* background: url(../img/background.jpg); */
   top: 0;
   left: 0;
   width: 100%;
@@ -229,32 +223,155 @@ hr {
   margin-bottom: 0px !important;
 }
 
-/* CLIENTES */
-#clientes {
+/* SERVIÇOS */
+#servicos {
   background: rgba(251, 183, 84, 0.6);
-  margin-top: 5px;
+  padding-bottom: 145px;
 }
 
-#clientes span {
-  font-weight: 500;
-}
+.servico-container {
+  display: grid;
+  grid-gap: 71px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
-.owl-carousel img {
-  background: #fcfcfc;
-  box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.55);
-  border-radius: 50%;
-  max-width: 60%;
-  margin: 5px auto;
-}
-
-.item {
   margin-bottom: 15px;
 }
 
-.item img:hover {
-  filter: brightness(130%);
-  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.55);
+.servico-container h3 {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 41px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 1.35px;
+  text-transform: uppercase;
+  margin-top: 41px;
+  margin-bottom: 41px;
 }
+
+.servico-info {
+  padding: 0.5rem;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.servico-info button {
+  width: 300px;
+  height: 56px;
+  left: 1063px;
+  top: 674px;
+  background: #ff471f;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+
+.servico-bdesc {
+  text-align: justify;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  align-items: center;
+  letter-spacing: 1.35px;
+  text-transform: uppercase;
+}
+
+.simg {
+  width: 200px;
+  height: 200px;
+}
+
+/* SERVICOS  INICIO MODAL */
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(79, 79, 79, 0.5);
+  z-index: 2;
+  display: none;
+  overflow: auto;
+  animation: modal-open 0.7s;
+}
+
+.modal-content {
+  background: #f7f2e5;
+  margin: 10% 10%;
+  padding: 20px;
+  width: auto;
+  border-radius: 4px;
+  z-index: 4;
+  position: relative;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.9), 0 7px 20px 0 rgba(0, 0, 0, 0.7);
+  top: 20%;
+  text-align: center;
+}
+
+.modal-header {
+  font-weight: 500;
+  padding: 10px 0;
+  font-size: 26px;
+}
+
+.modal-header .modal-close {
+  float: right;
+  font-size: 15px;
+  border: 0;
+  outline: 0;
+  border-radius: 50%;
+}
+
+.modal-body {
+  color: #4f4f4f;
+  padding: 15px 0;
+}
+
+.img-modal {
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.closeBtn {
+  position: absolute;
+  top: -17px;
+  right: -17px;
+  width: 2rem;
+  height: 2rem;
+  font-weight: bold;
+  border-radius: 100%;
+  background-color: #ff471f;
+  z-index: 4;
+  color: #fcfcfc;
+  line-height: 2rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.closeBtn:hover,
+.closeBtn:focus {
+  cursor: pointer;
+  color: #4f4f4f;
+  text-decoration: none;
+}
+
+@keyframes modal-open {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* PORTFOLIO FIM MODAL */
 
 /* PORTIFOLIO */
 #portfolio {
@@ -269,7 +386,7 @@ hr {
 
 .anchor {
   position: relative;
-  top: -80px;
+  top: -100px;
   visibility: hidden;
 }
 
@@ -286,28 +403,31 @@ hr {
   background: #000;
   box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.55);
   margin: 15px;
+  box-sizing: border-box;
+  display: inline-block;
 }
 
 .box .imgBx {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .box .imgBx img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: 0.5s;
+  transition: 2s;
 }
 
 .box:hover .imgBx img {
-  opacity: 0;
+  transform: scale(1.2);
 }
 
 .box .portfolio-conteudo {
@@ -328,21 +448,28 @@ hr {
   height: 100%;
   bottom: 0;
   left: 0;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .box .portfolio-conteudo h3 {
   margin: 0;
   padding: 0;
   font-size: 20px;
+  color: #000;
+}
+
+.box:hover .portfolio-conteudo h3 {
+  color: #fcfcfc;
 }
 
 .box .portfolio-conteudo p {
   margin: 10px 0 0;
-  padding: 0;
+  padding: 10px;
   opacity: 0;
   line-height: 1.2em;
-  transition: 0.5s;
+  transition: 2s;
   text-align: justify;
+  color: #fcfcfc;
 }
 
 .box:hover .portfolio-conteudo p {
@@ -350,9 +477,32 @@ hr {
   transition-delay: 0.3s;
 }
 
-/* SERVIÇOS */
-#servicos {
+/* CLIENTES */
+#clientes {
   background: rgba(251, 183, 84, 0.6);
+  margin-top: 5px;
+  padding-bottom: 67px;
+}
+
+#clientes span {
+  font-weight: 500;
+}
+
+.owl-carousel img {
+  background: #fcfcfc;
+  box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.55);
+  border-radius: 50%;
+  max-width: 60%;
+  margin: 5px auto;
+}
+
+.item {
+  margin-bottom: 15px;
+}
+
+.item img:hover {
+  filter: brightness(115%);
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.55);
 }
 
 /* CONTATO  */
@@ -484,6 +634,46 @@ textarea {
   position: absolute;
 }
 
+/* RODAPE */
+.rodape {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 1.35px;
+  text-transform: uppercase;
+  background: #fbb754;
+  color: #000000;
+  height: 63px;
+  padding-top: 15px;
+}
+
+.rodape p {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.sociais a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.sociais a :hover {
+  color: #ff471f;
+  transition: all 0.3s ease-out;
+}
+
+.col-md-12 p {
+  display: inline;
+}
+
+.col-md-12 span {
+  float: right;
+  display: inline;
+  margin-right: 30px;
+}
+
 /* Media queries */
 /* - */
 
@@ -492,7 +682,7 @@ textarea {
     padding: 0 0 25px 0;
   }
 
-  svg {
+  .navbar-brand img {
     margin: 0;
     padding: 0;
   }
@@ -534,7 +724,23 @@ textarea {
     height: 0;
     border-radius: 25px;
   }
+
   .mapa h1 {
     text-align: center;
+  }
+
+  .servico-bdesc,
+  #portfolio,
+  #quem,
+  #servicos {
+    padding-bottom: 25px;
+  }
+
+  .rodape {
+    height: 83px;
+  }
+
+  .box .portfolio-conteudo {
+    font-size: 10px;
   }
 }
