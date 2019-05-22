@@ -1,81 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
-    />
-    <link rel="icon" href="img/logo1.jpg" />
-    <title>Mostra Elos</title>
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,
-      user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
   <link rel="icon" href="img/logo1.jpg" />
   <title>Mostra Elos</title>
 
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,
+      user-scalable=no" />
+    <link rel="icon" href="img/logo1.jpg" />
+    <title>Mostra Elos</title>
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Nunito|Roboto:100,300,400,500,600,700"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-  integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
-  <link rel="stylesheet" href="css/estilos.css" />
-
-  <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css" />
-  <link rel="stylesheet" type="text/css" href="css/owl.theme.default.css" />
-
-  
-</head>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Nunito|Roboto:100,300,400,500,600,700"
+      rel="stylesheet" />
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/owl.theme.default.css" />
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
 
 <body data-spy="scroll" data-target="#navbarResponsive">
   <!-- INICIO -->
   <div id="inicio">
-    <!-- NAV -->
+    <!-- Inicio Menu Hamburguer -->
     <nav class="navbar navbar-expand-md fixed-top">
       <a class="navbar-brand" href="#">
         <img src="img/Logo.png" alt="" />
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="line"></span>
         <span class="line"></span>
         <span class="line"></span>
       </button>
+      <!-- Fim Menu Hamburguer -->
 
+      <!-- Inicio Menu -->
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a href="#inicio" class="nav-link">Início</a>
+          <li class="nav-item active" data-toggle="collapse" data-target=".navbar-collapse.show">
+            <a href="#inicio" class="nav-link">Início<span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
             <a href="#quem-a" class="nav-link">Quem Somos</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
             <a href="#servicos-a" class="nav-link">Serviços</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
             <a href="#portfolio-a" class="nav-link">Portfólio</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
             <a href="#clientes-a" class="nav-link">Clientes</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
             <a href="#contato-a" class="nav-link">Contato</a>
           </li>
         </ul>
       </div>
     </nav>
-    <!-- FINAL da NAV -->
+    <!-- Final Menu -->
 
     <!-- BANNER -->
     <div class="banner">
       <div class="home-wrap">
         <div class="home-inner ">
-            <img  class="img-fluid" src="img/background.jpg" alt="">          
+          <img class="img-fluid" src="img/background.jpg" alt="">
         </div>
       </div>
     </div>
@@ -94,7 +95,7 @@
   <!-- FIM DA INICIO -->
 
   <!-- QUEM SOMOS -->
-  <div id="quem" class="offset">
+  <div id="quem">
     <a id="quem-a" class="anchor">a</a>
     <div class="col-12 narrow text-center">
       <h1 class="qtitulo">
@@ -121,7 +122,7 @@
   <!-- FIM DA QUEM SOMOS -->
 
   <!-- SERVIÇOS -->
-  <div id="servicos" class="offset">
+  <div id="servicos">
     <a id="servicos-a" class="anchor">a</a>
     <div class="col-12 narrow text-center">
       <h1 class="qtitulo">
@@ -220,7 +221,7 @@
 
   <!-- PORTFOLIO -->
 
-  <div id="portfolio" class="offset">
+  <div id="portfolio">
     <a id="portfolio-a" class="anchor">a</a>
     <div class="col-12 narrow text-center">
       <h1 class="qtitulo">
@@ -286,7 +287,7 @@
   <!-- FIM DA PORTFOLIO -->
 
   <!-- CLIENTES -->
-  <div id="clientes" class="offset">
+  <div id="clientes">
     <a id="clientes-a" class="anchor">a</a>
     <div class="col-12 narrow text-center">
       <h1 class="qtitulo">
@@ -452,45 +453,37 @@
 
 </body>
 
-    <!-- FIM DA CONTATO -->
+<!-- FIM DA CONTATO -->
 
-    <script src="js/main.js"></script>
+<script src="js/main.js"></script>
 
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.js"
-      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/owl.carousel.js"></script>
-    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
-    <script type="text/javascript">
-      $(".owl-carousel").owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: true,
-        responsive: {
-          0: {
-            items: 1
-          },
-          600: {
-            items: 2
-          },
-          1000: {
-            items: 4
-          }
-        }
-      });
-    </script>
-  </body>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/owl.carousel.js"></script>
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+<script type="text/javascript">
+  $(".owl-carousel").owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 2
+      },
+      1000: {
+        items: 4
+      }
+    }
+  });
+</script>
+</body>
+
 </html>

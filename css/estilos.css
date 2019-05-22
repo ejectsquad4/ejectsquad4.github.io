@@ -78,6 +78,12 @@ hr {
   background: #fcfcfc;
 }
 
+.navbar-nav .nav-link.active::after,
+.navbar-nav .nav-link.active:hover::after {
+  width: 100%;
+  transition: 0.5s;
+}
+
 .navbar a {
   color: #ff471f !important;
 }
@@ -626,6 +632,7 @@ textarea {
   border-radius: 25px;
   margin: 10px 100px;
 }
+
 .responsive-map iframe {
   left: 0;
   top: 0;
@@ -738,6 +745,11 @@ textarea {
 
   .rodape {
     height: 83px;
+  }
+
+  .rodape span {
+    display: block;
+    float: none;
   }
 
   .box .portfolio-conteudo {
