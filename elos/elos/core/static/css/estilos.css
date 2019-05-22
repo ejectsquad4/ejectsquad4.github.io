@@ -9,6 +9,7 @@ body {
   text-transform: uppercase;
   color: #4f4f4f;
   padding-bottom: 0;
+  background: #f7f2e5;
 }
 
 #t1 {
@@ -77,6 +78,12 @@ hr {
   background: #fcfcfc;
 }
 
+.navbar-nav .nav-link.active::after,
+.navbar-nav .nav-link.active:hover::after {
+  width: 100%;
+  transition: 0.5s;
+}
+
 .navbar a {
   color: #ff471f !important;
 }
@@ -130,15 +137,6 @@ hr {
 }
 
 /* INICIO */
-.home-inner {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: url(../img/background.jpg);
-  background-size: cover;
-  overflow: hidden;
-}
-
 .caption {
   width: 100%;
   max-width: 100%;
@@ -164,9 +162,10 @@ hr {
   height: 100%;
 }
 
-.home-inner {
+.home-inner img {
   position: fixed;
   display: table;
+  /* background: url(../img/background.jpg); */
   top: 0;
   left: 0;
   width: 100%;
@@ -175,6 +174,10 @@ hr {
   background-position: center center;
   transform: translateZ(0);
   will-change: transform;
+}
+
+.bg {
+  object-fit: cover;
 }
 
 /* QUEM SOMOS */
@@ -230,127 +233,6 @@ hr {
   margin-bottom: 0px !important;
 }
 
-/* CLIENTES */
-#clientes {
-  background: rgba(251, 183, 84, 0.6);
-  margin-top: 5px;
-}
-
-#clientes span {
-  font-weight: 500;
-}
-
-.owl-carousel img {
-  background: #fcfcfc;
-  box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.55);
-  border-radius: 50%;
-  max-width: 60%;
-  margin: 5px auto;
-}
-
-.item {
-  margin-bottom: 15px;
-}
-
-.item img:hover {
-  filter: brightness(130%);
-  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.55);
-}
-
-/* PORTIFOLIO */
-#portfolio {
-  font-weight: 500;
-  background: #f7f2e5;
-  margin: -8px;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 0 60px;
-}
-
-.anchor {
-  position: relative;
-  top: -100px;
-  visibility: hidden;
-}
-
-.portfolio-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.box {
-  position: relative;
-  width: 391px;
-  height: 339px;
-  background: #000;
-  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.55);
-  margin: 15px;
-}
-
-.box .imgBx {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.box .imgBx img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: 0.5s;
-}
-
-.box:hover .imgBx img {
-  /* opacity: 0; */
-}
-
-.box .portfolio-conteudo {
-  position: absolute;
-  bottom: 20px;
-  left: 10%;
-  width: 80%;
-  height: 60px;
-  background: #f7f2e5;
-  transition: 0.5s;
-  overflow: hidden;
-  padding: 15px;
-  box-sizing: border-box;
-}
-
-.box:hover .portfolio-conteudo {
-  width: 100%;
-  height: 100%;
-  bottom: 0;
-  left: 0;
-}
-
-.box .portfolio-conteudo h3 {
-  margin: 0;
-  padding: 0;
-  font-size: 20px;
-}
-
-.box .portfolio-conteudo p {
-  margin: 10px 0 0;
-  padding: 0;
-  opacity: 0;
-  line-height: 1.2em;
-  transition: 0.5s;
-  text-align: justify;
-}
-
-.box:hover .portfolio-conteudo p {
-  opacity: 1;
-  transition-delay: 0.3s;
-}
-
 /* SERVIÇOS */
 #servicos {
   background: rgba(251, 183, 84, 0.6);
@@ -392,9 +274,6 @@ hr {
   height: 56px;
   left: 1063px;
   top: 674px;
-
-  /* Laranja */
-
   background: #ff471f;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
@@ -503,6 +382,138 @@ hr {
 }
 
 /* PORTFOLIO FIM MODAL */
+
+/* PORTIFOLIO */
+#portfolio {
+  font-weight: 500;
+  background: #f7f2e5;
+  margin: -8px;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 60px;
+}
+
+.anchor {
+  position: relative;
+  top: -100px;
+  visibility: hidden;
+}
+
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.box {
+  position: relative;
+  width: 391px;
+  height: 339px;
+  background: #000;
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.55);
+  margin: 15px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.box .imgBx {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.box .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 2s;
+}
+
+.box:hover .imgBx img {
+  transform: scale(1.2);
+}
+
+.box .portfolio-conteudo {
+  position: absolute;
+  bottom: 20px;
+  left: 10%;
+  width: 80%;
+  height: 60px;
+  background: #f7f2e5;
+  transition: 0.5s;
+  overflow: hidden;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.box:hover .portfolio-conteudo {
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.box .portfolio-conteudo h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  color: #000;
+}
+
+.box:hover .portfolio-conteudo h3 {
+  color: #fcfcfc;
+}
+
+.box .portfolio-conteudo p {
+  margin: 10px 0 0;
+  padding: 10px;
+  opacity: 0;
+  line-height: 1.2em;
+  transition: 2s;
+  text-align: justify;
+  color: #fcfcfc;
+}
+
+.box:hover .portfolio-conteudo p {
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+
+/* CLIENTES */
+#clientes {
+  background: rgba(251, 183, 84, 0.6);
+  margin-top: 5px;
+  padding-bottom: 67px;
+}
+
+#clientes span {
+  font-weight: 500;
+}
+
+.owl-carousel img {
+  background: #fcfcfc;
+  box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.55);
+  border-radius: 50%;
+  max-width: 60%;
+  margin: 5px auto;
+}
+
+.item {
+  margin-bottom: 15px;
+}
+
+.item img:hover {
+  filter: brightness(115%);
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.55);
+}
 
 /* CONTATO  */
 .contatoMapa {
@@ -646,6 +657,7 @@ textarea {
   background: #fbb754;
   color: #000000;
   height: 63px;
+  padding-top: 15px;
 }
 
 .rodape p {
@@ -653,11 +665,6 @@ textarea {
   padding-top: 10px;
 }
 
-.sociais {
-  float: right;
-  margin-right: 90px;
-  padding-bottom: 10px;
-}
 .sociais a {
   text-decoration: none;
   color: #000000;
@@ -668,6 +675,16 @@ textarea {
   transition: all 0.3s ease-out;
 }
 
+.col-md-12 p {
+  display: inline;
+}
+
+.col-md-12 span {
+  float: right;
+  display: inline;
+  margin-right: 30px;
+}
+
 /* Media queries */
 /* - */
 
@@ -676,7 +693,7 @@ textarea {
     padding: 0 0 25px 0;
   }
 
-  svg {
+  .navbar-brand img {
     margin: 0;
     padding: 0;
   }
@@ -729,7 +746,17 @@ textarea {
   #servicos {
     padding-bottom: 25px;
   }
+
   .rodape {
     height: 83px;
+  }
+
+  .rodape span {
+    display: block;
+    float: none;
+  }
+
+  .box .portfolio-conteudo {
+    font-size: 10px;
   }
 }

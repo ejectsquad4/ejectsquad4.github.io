@@ -75,17 +75,19 @@
       <!-- BANNER -->
       <div class="banner">
         <div class="home-wrap">
-          <div class="home-inner"></div>
+          <div class="home-inner">
+        {% for inic in inic %}
+            <img class="bg img-fluid" src="{{ inic.img_inic.url }}" alt="{{ inic.tit_inic }}">
+          </div>
         </div>
       </div>
       <div class="caption text-center">
-        {% for inic in inic %}
         <h1 id="t1">
           {{ inic.tit_inic }}
         </h1>
         <hr />
         <h2 id="t2">{{ inic.subtit_inic }}</h2>
-        <a href="#contato" class="botao btn btn-outline-light btn-lg">seja um elo <br> dessa corrente</a>
+        <a href="#contato-a" class="botao btn btn-outline-light btn-lg">seja um elo <br> dessa corrente</a>
         {% endfor %}
       </div>
 
