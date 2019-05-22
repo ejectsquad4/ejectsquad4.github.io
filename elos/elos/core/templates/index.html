@@ -1,0 +1,348 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <link rel="icon" href="{% static 'img/logo1.jpg' %}" />
+    <title>Mostra Elos</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Nunito|Roboto:100,300,400,500,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}" />
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/owl.theme.default.css' %}">
+  </head>
+
+  <!-- Ativando o link do menu, de acordo com a sessão que estou do site -->
+
+  <body data-spy="scroll" data-target="#navbarResponsive">
+    <!-- INICIO -->
+    <div id="inicio">
+      <!-- NAV -->
+      <nav class="navbar navbar-expand-md fixed-top">
+        <a class="navbar-brand" href="#">
+          <img src="{% static 'img/Logo.png' %}" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+        >
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto ">
+            <li class=" nav-item">
+              <a href=" #inicio" class="nav-link">Início</a>
+            </li>
+            <li class="nav-item">
+              <a href="#quem-a" class="nav-link">Quem Somos</a>
+            </li>
+            <li class="nav-item">
+              <a href="#servicos-a" class="nav-link">Serviços</a>
+            </li>
+            <li class="nav-item">
+              <a href="#portfolio-a" class="nav-link">Portfólio</a>
+            </li>
+            <li class="nav-item">
+              <a href="#clientes-a" class="nav-link">Clientes</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contato-a" class="nav-link">Contato</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- FINAL da NAV -->
+
+      <!-- BANNER -->
+      <div class="banner">
+        <div class="home-wrap">
+          <div class="home-inner">
+        {% for inic in inic %}
+            <img class="bg img-fluid" src="{{ inic.img_inic.url }}" alt="{{ inic.tit_inic }}">
+          </div>
+        </div>
+      </div>
+      <div class="caption text-center">
+        <h1 id="t1">
+          {{ inic.tit_inic }}
+        </h1>
+        <hr />
+        <h2 id="t2">{{ inic.subtit_inic }}</h2>
+        <a href="#contato-a" class="botao btn btn-outline-light btn-lg">seja um elo <br> dessa corrente</a>
+        {% endfor %}
+      </div>
+
+      <!-- FIM da BANNER -->
+    </div>
+    <!-- FIM DA INICIO -->
+
+    <!-- QUEM SOMOS -->
+    <div id="quem" class="offset">
+      <a id="quem-a" class="anchor">a</a>
+      <div class="col-12 narrow text-center">
+        <h1 class="qtitulo">
+          <span class="thin">Quem</span> <span class="bold">somos</span>
+        </h1>
+        {% for quemSomos in quemSomos%}
+        <img 
+          class="qimg img-fluid" 
+          src="{{ quemSomos.img_quem_somos.url }}" 
+          alt="{{ quemSomos.titulo }}" 
+        />
+        <h2 class="infot">{{quemSomos.tit_quem_somos}}</h2>
+        <p class="info">
+          {{ quemSomos.desc_quem_somos }}
+        </p>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- FIM DA QUEM SOMOS -->
+
+    <!-- SERVIÇOS -->
+    <div id="servicos" class="offset">
+        <a id="servicos-a" class="anchor">a</a>
+        <div class="col-12 narrow text-center">
+          <h1 class="qtitulo">
+            <span class="bold">Serviços</span>
+          </h1>
+
+        <div class="servico-container container">
+          {% for serv in serv %}
+            <div class="servico-info">
+              <img
+                class="simg img-fluid"
+                src="{{ serv.img_serviço.url }}"
+                alt="{{ serv.titulo }}"
+              />
+              <h3>{{ serv.titulo }}</h3>
+              <p class="servico-bdesc">
+                {{ serv.desc_serviço }}
+              </p>             
+              <button class="modal-open botao"data-modal="modal_{{ serv.titulo }}">Saiba Mais</button>
+              <div class="modal" id="modal_{{ serv.titulo }}">
+                  <div class="modal-content">
+                      <div class="modal-header">{{ serv.titulo }}<a href="#modal_{{ serv.titulo }}" class="popup_close closeBtn modal-close">X</a>
+                      </div>
+                      <div class="modal-body">
+                          <img  class="img-modal" src="{{ serv.img_serviço.url }}" alt=" {{ serv.titulo }}">
+                          <p class="servico-bdesc">{{ serv.sobre_serviço }}</p>
+                      </div>
+                  </div>
+              </div>
+              </div>
+          {% endfor %}   
+          </div>  
+      </div>
+    </div>
+    <!-- FIM DA SERVIÇOS -->
+
+    <!-- PORTFOLIO -->
+
+    <div id="portfolio" class="offset">
+      <a id="portfolio-a" class="anchor">a</a>
+      <div class="col-12 narrow text-center">
+        <h1 class="qtitulo">
+          <span class="bold">Portfólio</span>
+        </h1>
+        <div class="portfolio-container">
+          {% for port in port %}
+          <div class="box">
+            <div class="imgBx">
+              <img src="{{ port.img_portfolio.url }}" alt="{{ port.titulo }}" />
+            </div>
+            <div class="portfolio-conteudo">
+              <h3>{{ port.titulo }}</h3>
+              <p>
+                {{ port.desc_portfolio }}
+              </p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <!-- FIM DA PORTFOLIO -->
+
+    <!-- CLIENTES -->
+    <div id="clientes" class="offset">
+      <a id="clientes-a" class="anchor">a</a>
+      <div class="col-12 narrow text-center">
+        <h1 class="qtitulo">
+          <span class="bold">Clientes</span>
+        </h1>
+      </div>
+
+      <!-- CAROUSEL -->
+      <div class="owl-carousel owl-theme">
+        {% for cliente in cliente %}
+        <div class="item ">
+          <img src="{{ cliente.logo_clientes.url }}" alt="{{ core.titulo }}">
+        </div>
+        {% endfor %}
+      </div>
+      <!-- FIM DO CAROUSEL -->
+    </div>
+
+    <!-- FIM DA CLIENTES -->
+
+    <!-- CONTATO -->
+    <div id="contato container-fluid" class="offset contatoMapa">
+      <a id="contato-a" class="anchor">a</a>
+
+      <div class="row">
+        <div class="col-md-6 formulario">
+          <h1>Contato</h1>
+          <form action="#contato-a" method="POST">
+            {% csrf_token %}
+            <ul class="form-style-1">
+              <li>
+                {{ form.nome}}
+                {{ form.telefone }}
+                {% if form.nome.errors %}
+                  {% for error in form.nome.errors %}
+                    {{ error }}
+                  {% endfor %}
+                {% endif %}
+                {% if form.telefone.errors %}
+                  <p></p>
+                  {% for error in form.telefone.errors %}
+                    {{ error }}
+                  {% endfor %}
+                {% endif %}
+              </li>
+              <li>
+                {{ form.email }}
+                {% if form.email.errors %}
+                  {% for error in form.email.errors %}
+                    {{ error }}
+                  {% endfor %}
+                {% endif %}
+              </li>
+              <li>
+                {{ form.mensagem }}
+                {% if form.mensagem.errors %}
+                  {% for error in form.mensagem.errors %}
+                    {{ error }}
+                  {% endfor %}
+                {% endif %}
+              </li>
+              <div class="buttonHolder">
+                <li>
+                  <input type="submit" value="ENVIAR" />
+                </li>
+              </div>
+            </ul>
+          </form>
+        </div>
+
+        <div class="col-md-6 mapa">
+          <h1>Onde estamos</h1>
+          <div class="responsive-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.0869096872666!2d-35.201285699818705!3d-5.843374609194293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b2ff82aa3e3b4d%3A0x20c4bb30f68e7bc3!2sEscola+de+Ci%C3%AAncias+e+Tecnologia+-+ECT%2FUFRN!5e0!3m2!1spt-BR!2sbr!4v1558048593188!5m2!1spt-BR!2sbr"
+              width="500"
+              height="460"
+              frameborder="0"
+              style="border:0"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FIM DA CONTATO -->
+    <!-- INICIO FOOTER -->
+
+    <div  class="rodape">
+          <p class="textoRodape"> iv © ProSEmpre EJECT 2019         
+      <span class="sociais">
+        <a href="https://twitter.com/AssencoMau" target="_blank">
+          <i class="fab fa-whatsapp fa-3x"></i>
+        </a>
+        <a href="https://www.facebook.com/mau.assenco"
+            target="_blank">
+            <i class="fab fa-facebook fa-3x"></i>
+        </a>         
+        <a href=https://www.instagram.com/mau.assenco"
+            target="_blank">
+            <i class="fab fa-instagram fa-3x"></i>
+        </a>
+      </span></p> 
+    </div>
+  <!-- FINAL FOOTER -->
+
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/5cdf4f3a2846b90c57af1ef7/default';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
+
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/owl.carousel.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script type="text/javascript">
+      $(".owl-carousel").owlCarousel({
+        // stagePadding: 50,
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 2
+          },
+          1000: {
+            items: 4
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
