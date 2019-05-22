@@ -176,6 +176,10 @@ hr {
   will-change: transform;
 }
 
+.bg {
+  object-fit: cover;
+}
+
 /* QUEM SOMOS */
 #quem {
   background: #f7f2e5;
