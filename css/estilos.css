@@ -381,7 +381,7 @@ hr {
   }
 }
 
-/* PORTFOLIO FIM MODAL */
+/* SERVICOS FIM MODAL */
 
 /* PORTIFOLIO */
 #portfolio {
@@ -459,6 +459,7 @@ hr {
   bottom: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.5);
+  padding-top: 50px;
 }
 
 .box .portfolio-conteudo h3 {
@@ -521,6 +522,7 @@ hr {
   padding-bottom: 67px;
 }
 
+
 .form-style-1 {
   margin: 10px 100px;
   padding: 20px 12px 10px 20px;
@@ -556,7 +558,10 @@ textarea {
   border: 1px solid #ff471f;
 }
 
-::placeholder {
+.form-style-1 input[type="text"]::placeholder,
+.form-style-1 input[type="number"]::placeholder,
+.form-style-1 input[type="email"]::placeholder,
+textarea::placeholder {
   color: #000;
   padding-top: 65px;
   font-family: Nunito;
